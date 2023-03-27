@@ -123,6 +123,7 @@ class SmoothPinCodeInput extends Component {
       password,
       mask,
       autoFocus,
+      showSoftInputOnFocus,
       containerStyle,
       cellStyle,
       cellStyleFocused,
@@ -212,6 +213,7 @@ class SmoothPinCodeInput extends Component {
         </View>
         <TextInput
           disableFullscreenUI={disableFullscreenUI}
+          showSoftInputOnFocus={showSoftInputOnFocus}
           value={value}
           ref={this.inputRef}
           onChangeText={this._inputCode}
@@ -251,6 +253,7 @@ class SmoothPinCodeInput extends Component {
     maskDelay: 200,
     keyboardType: 'numeric',
     autoFocus: false,
+    showSoftInputOnFocus: false,
     restrictToNumbers: false,
     containerStyle: styles.containerDefault,
     cellStyle: styles.cellDefault,
@@ -283,6 +286,7 @@ SmoothPinCodeInput.propTypes = {
   password: PropTypes.bool,
 
   autoFocus: PropTypes.bool,
+  showSoftInputOnFocus: PropTypes.bool,
 
   restrictToNumbers: PropTypes.bool,
 
